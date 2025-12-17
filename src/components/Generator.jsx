@@ -10,7 +10,7 @@ const Generator = ({ lang, setLang }) => {
     const [stack, setStack] = useState("React, Tailwind CSS, TypeScript");
     const [pkgManager, setPkgManager] = useState("npm");
     const [deployment, setDeployment] = useState([]);
-    const [fileType, setFileType] = useState("repo"); // 'repo' or 'path'
+    const [fileType, setFileType] = useState("repo");
     const [targetPath, setTargetPath] = useState("src/components");
 
     // Default active rules for Antigravity - expanded default set (English)
@@ -36,8 +36,12 @@ const Generator = ({ lang, setLang }) => {
         else setDeployment([...deployment, tag]);
     };
 
-    const addPresetRule = (rule) => {
-        if (!activeRules.includes(rule)) setActiveRules([...activeRules, rule]);
+    const togglePresetRule = (rule) => {
+        if (activeRules.includes(rule)) {
+            setActiveRules(activeRules.filter(r => r !== rule));
+        } else {
+            setActiveRules([...activeRules, rule]);
+        }
     };
 
     const removeRule = (index) => {
@@ -49,6 +53,22 @@ const Generator = ({ lang, setLang }) => {
             setActiveRules([...activeRules, newRule.trim()]);
             setNewRule("");
         }
+    };
+
+    const handleReset = () => {
+        setRole("Frontend Developer");
+        setStack("React, Tailwind CSS, TypeScript");
+        setPkgManager("npm");
+        setDeployment([]);
+        setFileType("repo");
+        setTargetPath("src/components");
+        setActiveRules([
+            "KISS Principle: Keep It Simple, Stupid. Prefer the most direct and stable implementation.",
+            "Structured Process: Follow 'Ideation -> Review -> Task Breakdown'.",
+            "Componentization: Follow Single Responsibility Principle. Separate UI and Logic (Container/Presentational).",
+            "Layered Architecture: Strictly follow View -> Logic -> Data one-way dependency flow."
+        ]);
+        setNewRule("");
     };
 
     // --- Generation Logic for Google Antigravity ---
@@ -124,20 +144,30 @@ ${activeRules.map(rule => {
                     </div>
                 </div>
 
-                {/* Language Switcher */}
-                <div className="flex bg-[#1e1e1e] rounded p-1 border border-[#3c3c3c]">
+                <div className="flex items-center gap-3">
+                    {/* Reset Button */}
                     <button
-                        onClick={() => setLang('en')}
-                        className={`px-3 py-1 text-xs rounded transition-colors ${lang === 'en' ? 'bg-[#007acc] text-white' : 'text-gray-400 hover:text-gray-200'}`}
+                        onClick={handleReset}
+                        className="text-xs text-red-400 hover:text-red-300 px-3 py-1 border border-red-900/50 rounded bg-red-900/10 hover:bg-red-900/30 transition-colors"
                     >
-                        English
+                        {t.reset}
                     </button>
-                    <button
-                        onClick={() => setLang('fa')}
-                        className={`px-3 py-1 text-xs rounded transition-colors ${lang === 'fa' ? 'bg-[#007acc] text-white' : 'text-gray-400 hover:text-gray-200'}`}
-                    >
-                        فارسی
-                    </button>
+
+                    {/* Language Switcher */}
+                    <div className="flex bg-[#1e1e1e] rounded p-1 border border-[#3c3c3c]">
+                        <button
+                            onClick={() => setLang('en')}
+                            className={`px-3 py-1 text-xs rounded transition-colors ${lang === 'en' ? 'bg-[#007acc] text-white' : 'text-gray-400 hover:text-gray-200'}`}
+                        >
+                            English
+                        </button>
+                        <button
+                            onClick={() => setLang('fa')}
+                            className={`px-3 py-1 text-xs rounded transition-colors ${lang === 'fa' ? 'bg-[#007acc] text-white' : 'text-gray-400 hover:text-gray-200'}`}
+                        >
+                            فارسی
+                        </button>
+                    </div>
                 </div>
             </div>
 
@@ -262,10 +292,9 @@ ${activeRules.map(rule => {
                                 const isAdded = activeRules.includes(rule);
                                 const label = rule.split(':')[0];
                                 return (
-                                    <button key={rule} onClick={() => addPresetRule(rule)}
-                                        disabled={isAdded}
+                                    <button key={rule} onClick={() => togglePresetRule(rule)}
                                         className={`text-xs px-2.5 py-1.5 rounded border flex items-center gap-1 transition-all ${isAdded
-                                            ? 'bg-[#2d2d2d] text-gray-600 border-[#3c3c3c] cursor-not-allowed'
+                                            ? 'bg-[#2da042] text-white border-[#2da042]'
                                             : 'bg-[#252526] text-[#4ec9b0] border-[#3c3c3c] hover:border-[#4ec9b0] hover:bg-[#2d2d2d]'
                                             }`}
                                     >

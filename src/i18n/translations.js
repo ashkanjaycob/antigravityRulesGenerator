@@ -13,7 +13,8 @@ export const translations = {
         custom_placeholder: "Enter custom rule...",
         add: "Add",
         preview_result: "Preview Result",
-        export: "Export"
+        export: "Export",
+        reset: "Reset Default"
     },
     fa: {
         title: "تولید کننده",
@@ -29,6 +30,7 @@ export const translations = {
         custom_placeholder: "قانون سفارشی وارد کنید...",
         add: "افزودن",
         preview_result: "پیش‌نمایش نتیجه",
-        export: "خروجی گرفتن"
+        export: "خروجی گرفتن",
+        reset: "بازنشانی پیش‌فرض"
     }
 };
