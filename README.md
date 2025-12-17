@@ -1,84 +1,41 @@
+<div dir="rtl">
+
 # Google Antigravity Rules Generator
 
-[中文] | [English](#english)
+**Google Antigravity Rules Generator** یک وب‌اپلیکیشن ساده و کارراه انداز است که برای تولید قوانین سفارشیِ انطباق مهندسی Antigravity طراحی شده است. این پروژه بر پایه Vite، React و Tailwind CSS ساخته شده و از تولید پویای پیکربندی‌های Markdown پشتیبانی می‌کند.
 
-**Google Antigravity Rules Generator** 是一个现代化的 Web 应用程序，用于生成自定义的 Antigravity 工程合规规则。该项目基于 Vite、React 和 Tailwind CSS 构建，支持动态生成 Markdown 配置文件。
+## 🚀 ویژگی‌ها
 
-## 🚀 功能特性
+- **شخصی‌سازی قوانین**: انتخاب و افزودن قوانین مهندسی پایه به صورت بصری.
+- **تولید پویا**: تولید لحظه‌ای (Real-time) مستندات Markdown مطابق با استاندارد Google Antigravity.
+- **رابط کاربری مدرن**: رابط کاربری با حالت تاریک (Dark Mode) که با Tailwind CSS نسخه ۴ ساخته شده است.
+- **خروجی آسان**: کپی در کلیپ‌بورد با یک کلیک یا دانلود به صورت فایل `.md`.
 
-- **规则定制**: 可视化选择和添加核心工程规则。
-- **动态生成**: 实时生成符合 Google Antigravity 标准的 Markdown 文档。
-- **现代化 UI**: 采用 Tailwind CSS v4 构建的深色模式界面。
-- **一键导出**: 支持复制到剪贴板或下载为 `.md` 文件。
+## 🛠 تکنولوژی‌های استفاده شده
 
-## 🛠 技术栈
+- **فریم‌ورک**: [React 19](https://react.dev/) + [Vite](https://vitejs.dev/)
+- **استایل‌دهی**: [Tailwind CSS v4](https://tailwindcss.com/)
+- **آیکون‌ها**: کامپوننت‌های SVG داخلی (بدون وابستگی به کتابخانه‌های آیکون خارجی)
+- **مدیریت پکیج**: pnpm
 
-- **框架**: [React 19](https://react.dev/) + [Vite](https://vitejs.dev/)
-- **样式**: [Tailwind CSS v4](https://tailwindcss.com/)
-- **图标**: 内置 SVG 组件 (无第三方图标库依赖)
-- **包管理**: pnpm
+## 📦 نصب و اجرا
 
-## 📦 安装与运行
-
-1. 克隆仓库:
+1. مخزن (Repository) را کلون کنید:
    ```bash
-   git clone https://github.com/halaziliuyidi/GoogleAntitravityRulesGenerator.git
-   ```
-2. 进入目录并安装依赖:
+   git clone [https://github.com/halaziliuyidi/GoogleAntitravityRulesGenerator.git](https://github.com/halaziliuyidi/GoogleAntitravityRulesGenerator.git)
+
+2.وارد پوشه پروژه شوید و وابستگی‌ها را نصب کنید:
    ```bash
    cd GoogleAntitravityRulesGenerator
    pnpm install
-   ```
-3. 启动开发服务器:
+
+3.سرور توسعه را اجرا کنید:
    ```bash
    pnpm dev
-   ```
-   访问 `http://localhost:5173`。
 
-4. 构建生产版本:
+4.سپس آدرس http://localhost:5173 را در مرورگر باز کنید.
+
+5.بیلد (Build) نهایی برای پروداکشن:
    ```bash
    pnpm build
-   ```
-
----
-
-<a name="english"></a>
-# English
-
-**Google Antigravity Rules Generator** is a modern web application designed to generate custom Antigravity engineering compliance rules. Built with Vite, React, and Tailwind CSS, it supports dynamic Markdown configuration generation.
-
-## 🚀 Features
-
-- **Rule Customization**: Visually select and add core engineering rules.
-- **Dynamic Generation**: Real-time generation of Google Antigravity standard Markdown documents.
-- **Modern UI**: Dark mode interface built with Tailwind CSS v4.
-- **Easy Export**: One-click copy to clipboard or download as `.md` file.
-
-## 🛠 Tech Stack
-
-- **Framework**: [React 19](https://react.dev/) + [Vite](https://vitejs.dev/)
-- **Styling**: [Tailwind CSS v4](https://tailwindcss.com/)
-- **Icons**: Built-in SVG components (No external icon dependencies)
-- **Package Manager**: pnpm
-
-## 📦 Installation & Usage
-
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/halaziliuyidi/GoogleAntitravityRulesGenerator.git
-   ```
-2. Navigate to the directory and install dependencies:
-   ```bash
-   cd GoogleAntitravityRulesGenerator
-   pnpm install
-   ```
-3. Start the development server:
-   ```bash
-   pnpm dev
-   ```
-   Open `http://localhost:5173`.
-
-4. Build for production:
-   ```bash
-   pnpm build
-   ```
+   ```   
