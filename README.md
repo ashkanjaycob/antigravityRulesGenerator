@@ -1,41 +1,38 @@
-<div dir="rtl">
-
 # Google Antigravity Rules Generator
 
-**Google Antigravity Rules Generator** یک وب‌اپلیکیشن ساده و کارراه انداز است که برای تولید قوانین سفارشیِ انطباق مهندسی Antigravity طراحی شده است. این پروژه بر پایه Vite، React و Tailwind CSS ساخته شده و از تولید پویای پیکربندی‌های Markdown پشتیبانی می‌کند.
+**Google Antigravity Rules Generator** is a streamlined and efficient web application designed to generate custom Antigravity engineering compliance rules. Built with Vite, React, and Tailwind CSS, it supports dynamic Markdown configuration generation.
 
-## 🚀 ویژگی‌ها
+## 🚀 Features
 
-- **شخصی‌سازی قوانین**: انتخاب و افزودن قوانین مهندسی پایه به صورت بصری.
-- **تولید پویا**: تولید لحظه‌ای (Real-time) مستندات Markdown مطابق با استاندارد Google Antigravity.
-- **رابط کاربری مدرن**: رابط کاربری با حالت تاریک (Dark Mode) که با Tailwind CSS نسخه ۴ ساخته شده است.
-- **خروجی آسان**: کپی در کلیپ‌بورد با یک کلیک یا دانلود به صورت فایل `.md`.
+- **Rule Customization**: Visually select and add core engineering rules.
+- **Dynamic Generation**: Real-time generation of Markdown documents adhering to Google Antigravity standards.
+- **Modern UI**: Dark mode interface built with Tailwind CSS v4.
+- **Easy Export**: One-click copy to clipboard or download as a `.md` file.
 
-## 🛠 تکنولوژی‌های استفاده شده
+## 🛠 Tech Stack
 
-- **فریم‌ورک**: [React 19](https://react.dev/) + [Vite](https://vitejs.dev/)
-- **استایل‌دهی**: [Tailwind CSS v4](https://tailwindcss.com/)
-- **آیکون‌ها**: کامپوننت‌های SVG داخلی (بدون وابستگی به کتابخانه‌های آیکون خارجی)
-- **مدیریت پکیج**: pnpm
+- **Framework**: [React 19](https://react.dev/) + [Vite](https://vitejs.dev/)
+- **Styling**: [Tailwind CSS v4](https://tailwindcss.com/)
+- **Icons**: Built-in SVG components (No external icon dependencies)
+- **Package Manager**: pnpm
 
-## 📦 نصب و اجرا
+## 📦 Installation & Usage
 
-1. مخزن (Repository) را کلون کنید:
+1. **Clone the repository:**
    ```bash
-   git clone [https://github.com/halaziliuyidi/GoogleAntitravityRulesGenerator.git](https://github.com/halaziliuyidi/GoogleAntitravityRulesGenerator.git)
+   git clone [https://github.com/ashkanjaycob/antigravityRulesGenerator.git](https://github.com/ashkanjaycob/antigravityRulesGenerator.git)
 
-2.وارد پوشه پروژه شوید و وابستگی‌ها را نصب کنید:
+2. **Navigate to the project directory and install dependencies:**
    ```bash
-   cd GoogleAntitravityRulesGenerator
+   cd antigravityRulesGenerator
    pnpm install
 
-3.سرور توسعه را اجرا کنید:
+3. **Run the development server:**
    ```bash
    pnpm dev
 
-4.سپس آدرس http://localhost:5173 را در مرورگر باز کنید.
+4. **Access the application at http://localhost:5173 in your browser.**
 
-5.بیلد (Build) نهایی برای پروداکشن:
+5. **Build for production:**
    ```bash
    pnpm build
-   ```   
